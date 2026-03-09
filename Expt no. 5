@@ -1,0 +1,23 @@
+ print("Dictionary after addind elements:")
+  print(student)
+
+  student["age"] =  21
+
+  print("\nDictionary after updating a value:")
+  print(student)
+
+  del student["course"]
+
+  print("\nDictionary after deleting a key-value pair:")
+  print(student)
+
+
+Dictionary after addind elements:
+{'name': 'Rahul', 'age': 20, 'course': 'Python'}
+
+Dictionary after updating a value:
+{'name': 'Rahul', 'age': 21, 'course': 'Python'}
+
+Dictionary after deleting a key-value pair:
+{'name': 'Rahul', 'age': 21}
+
