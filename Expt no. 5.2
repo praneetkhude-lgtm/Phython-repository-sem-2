@@ -1,0 +1,15 @@
+set1 = set(map(int,input("Enter elements of first set (space-seprated):").split()))
+
+set2 = set(map(int,input("Enter elements of second set (space-seprated):").split()))
+
+union_set = set1 | set2 
+
+intersection_set = set1 & set2
+
+print("Union of the sets:", union_set)
+print("Intersection of ther sets :", intersection_set)
+
+Enter elements of first set (space-seprated):123
+Enter elements of second set (space-seprated):3456
+Union of the sets: {3456, 123}
+Intersection of ther sets : set()
