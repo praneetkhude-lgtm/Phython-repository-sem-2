@@ -1,0 +1,27 @@
+from datetime import datetime
+
+file = "expenses.txt"
+
+# add expense
+def add(amount):
+    date = datetime.now().strftime("%Y-%m-%d")
+    with open(file, "a") as f:
+        f.write(f"{date},{amount}\n")
+
+# monthly total
+def total(year, month):
+    s = 0
+    try:
+        with open(file) as f:
+            for line in f:
+                d, amt = line.strip().split(",")
+                dt = datetime.strptime(d, "%Y-%m-%d")
+                if dt.year == year and dt.month == month:
+                    s += float(amt)
+    except FileNotFoundError:
+        pass
+    return s
+
+# example
+add(200)
+print("Total:", total(2026, 3))
