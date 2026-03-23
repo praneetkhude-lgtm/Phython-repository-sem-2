@@ -1,0 +1,10 @@
+source = "attendance.txt"
+backup = "attendance_backup.txt"
+
+with open(source, "r") as src:
+    data = src.read()
+
+with open(backup, "w") as dest:
+    dest.write(data)
+
+print("Backup created successfully!")
