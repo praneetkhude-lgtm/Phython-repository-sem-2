@@ -1,0 +1,15 @@
+from datetime import datetime
+
+file = "attendance.txt"
+
+# add attendance
+def mark_attendance(name, status):
+    date = datetime.now().strftime("%Y-%m-%d")
+    with open(file, "a") as f:
+        f.write(f"{date},{name},{status}\n")
+
+# example usage
+mark_attendance("Rahul", "Present")
+mark_attendance("Anita", "Absent")
+
+print("Attendance recorded!")
