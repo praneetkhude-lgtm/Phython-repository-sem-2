@@ -1,0 +1,26 @@
+class Student:
+    def __init__(self, name, tuition_fee, other_fees=0):
+        self.name = name
+        self.tuition_fee = tuition_fee
+        self.other_fees = other_fees
+
+    def calculate_total_cost(self):
+        return self.tuition_fee + self.other_fees
+
+    def add_fee(self, amount):
+        if amount > 0:
+            self.other_fees += amount
+        else:
+            print("Fee must be positive.")
+
+    def get_details(self):
+        return f"Student: {self.name}, Tuition Fee: {self.tuition_fee}, Other Fees: {self.other_fees}"
+
+
+# Example usage
+student = Student("Rahul", 30000, 5000)
+print(student.get_details())
+print("Total Cost:", student.calculate_total_cost())
+
+student.add_fee(2000)
+print("Updated Total Cost:", student.calculate_total_cost())
