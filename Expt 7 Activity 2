@@ -1,0 +1,26 @@
+class Employee:
+    def __init__(self, name, base_salary, bonus=0):
+        self.name = name
+        self.base_salary = base_salary
+        self.bonus = bonus
+
+    def calculate_salary(self):
+        return self.base_salary + self.bonus
+
+    def set_bonus(self, bonus):
+        if bonus >= 0:
+            self.bonus = bonus
+        else:
+            print("Bonus cannot be negative.")
+
+    def get_details(self):
+        return f"Employee: {self.name}, Base Salary: {self.base_salary}, Bonus: {self.bonus}"
+
+
+# Example usage
+emp = Employee("Alice", 50000, 5000)
+print(emp.get_details())
+print("Total Salary:", emp.calculate_salary())
+
+emp.set_bonus(8000)
+print("Updated Total Salary:", emp.calculate_salary())
