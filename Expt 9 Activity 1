@@ -1,0 +1,16 @@
+import math
+
+def calculate_emi(principal, annual_rate, tenure_years):
+    r = annual_rate / (12 * 100)   # monthly interest rate
+    n = tenure_years * 12          # number of months
+    
+    emi = (principal * r * math.pow(1 + r, n)) / (math.pow(1 + r, n) - 1)
+    return emi
+
+# Example
+P = 500000   # loan amount
+rate = 8.5   # annual interest rate
+years = 5    # tenure in years
+
+emi = calculate_emi(P, rate, years)
+print(f"Monthly EMI: {emi:.2f}")
