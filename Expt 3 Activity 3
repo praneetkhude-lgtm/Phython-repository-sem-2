@@ -1,0 +1,11 @@
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter seats per row: "))
+
+seat_number = 1
+
+for r in range(1, rows + 1):
+    print(f"\nRow {r}: ", end="")
+    
+    for c in range(1, cols + 1):
+        print(f"S{seat_number}", end=" ")
+        seat_number += 1
