@@ -1,0 +1,13 @@
+# Roll numbers of students in Class A
+class_a = {101, 102, 105, 108, 110}
+
+# Roll numbers of students in Class B
+class_b = {105, 107, 108, 112, 115}
+
+# Find students present in BOTH classes (Intersection)
+both_classes = class_a.intersection(class_b)
+
+# Alternatively, you can use the '&' operator:
+# both_classes = class_a & class_b
+
+print("Students present in both classes:", both_classes)
