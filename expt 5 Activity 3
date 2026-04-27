@@ -1,0 +1,15 @@
+library = {}
+
+library["Python"] = 250
+library["Mathematics"] = 300
+library["Mechanics"] = 150
+
+print("After adding elements:")
+print(library)
+
+library["Python"] = 350
+library["Mathematics"] = 375
+library["Mechanics"] = 200
+
+print("\nAfter updating values:")
+print(library)
